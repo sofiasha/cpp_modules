@@ -1,0 +1,23 @@
+NAME = megaphone
+
+SRCS = megaphone.cpp
+
+OBJ = $(SRCS:.cpp=.o)
+
+FLAGS = -Wall -Wextra -Werror -std=c++98
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@clang++ $(FLAGS) $(OBJ) -o $(NAME)
+	@echo "$(NAME) is ready"
+
+clean:
+	@rm -f $(OBJ)
+
+fclean:	clean
+	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
+
+re:	fclean all
+.PHONY:	all clean fclean re
