@@ -6,6 +6,9 @@ OBJ = $(SRCS:.cpp=.o)
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
+%.o: %.cpp
+	@clang++ $(FLAGS) -I. -c $< -o ${<:.cpp=.o}
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
