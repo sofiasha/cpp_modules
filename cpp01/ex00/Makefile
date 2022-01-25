@@ -9,10 +9,10 @@ OBJ			=	$(SRC:.cpp=.o)
 FLAGS	=	-Wall -Wextra -Werror
 
 %.o:		%.cpp
-			clang++ $(FLAGS) -std=c++98 -c -o $@ $?
+			g++ $(FLAGS) -std=c++98 -c -o $@ $?
 
 $(NAME):	$(OBJ)
-			clang++ $(OBJ) -o $(NAME)
+			g++ $(OBJ) -o $(NAME)
 
 all:		$(NAME)
 

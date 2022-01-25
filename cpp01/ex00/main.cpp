@@ -4,15 +4,15 @@ Zombie*	newZombie(std::string name);
 void	randomChump(std::string name);
 
 int	main(void) {
-	Zombie *john = newZombie("John");
-	Zombie *mary = newZombie("Mary");
-	Zombie *mike = newZombie("Mike");
+	Zombie *z1 = newZombie("Zomb_heap1");
+	Zombie *z2 = newZombie("Zomb_heap2");
+	Zombie *z3 = newZombie("Zomb_heap3");
 
-	randomChump("Chump1");
-	randomChump("Chump2");
-	randomChump("Chump3");
+	randomChump("Chump_stack1");
+	randomChump("Chump_stack2");
+	randomChump("Chump_stack3");
 
-	delete john;
-	delete mary;
-	delete mike;
+	delete z1;
+	delete z2;
+	delete z3;
 }

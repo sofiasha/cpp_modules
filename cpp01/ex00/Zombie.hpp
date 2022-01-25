@@ -5,7 +5,7 @@
 
 class Zombie {
 public:
-	Zombie(); // конструктор по умолчанию, срабатывает при создании объекта 
+	Zombie();
 	Zombie(std::string);
 	~Zombie();
 
