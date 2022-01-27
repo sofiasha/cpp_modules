@@ -24,7 +24,7 @@ void	Karen::complain(std::string level) {
 	int l = get_level(level);
 
 	if (l == -1)
-		std::cout << "No such level" << std::endl;
+		std::cout << "Wrong level" << std::endl;
 	else
 		(this->*f[l])();
 }

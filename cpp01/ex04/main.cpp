@@ -7,13 +7,14 @@ void	mreplace(std::string& s, std::string oldv, std::string newv) {
 	start = s.find(oldv);
 	while (start != std::string::npos) {
 		s = s.substr(0, start) + newv + s.substr(start + oldv.size());
+		printf("%lu", start);
 		start = s.find(oldv);
 	}
 }
 
 int main(int argc, char **argv) {
 	if (argc != 4) {
-		std::cout << "Usage: ./replace filename oldstring newstring"
+		std::cout << "Wrong arg num"
 			<< std::endl;
 		return 1;
 	}

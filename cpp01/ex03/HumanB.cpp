@@ -11,11 +11,11 @@ void	HumanB::setWeapon(Weapon& weapon) {
 }
 
 void	HumanB::attack() {
-	std::string	wp;
+	std::string	weap;
 
 	if (this->_weapon)
-		wp = _weapon->getType();
+		weap = _weapon->getType();
 	else
-		wp = "hands";
-	std::cout << _name << " attacks with his " << wp << std::endl;
+		weap = "hands";
+	std::cout << _name << " is attacking with a " << weap << std::endl;
 }

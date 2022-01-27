@@ -7,5 +7,5 @@ int main() {
 	karen.complain("INFO");
 	karen.complain("WARNING");
 	karen.complain("ERROR");
-	karen.complain("asdasd");
+	karen.complain("thisleveldoesnotexist");
 }
