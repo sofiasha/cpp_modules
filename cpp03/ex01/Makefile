@@ -1,4 +1,4 @@
-NAME		=	ex
+NAME		=	scav
 
 SRC			=	$(wildcard *.cpp)
 

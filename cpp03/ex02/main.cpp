@@ -2,6 +2,7 @@
 #include "ClapTrap.hpp"
 
 int main() {
+	
 	FragTrap	bat("Batman");
 	FragTrap	jok("Joker");
 

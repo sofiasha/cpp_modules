@@ -51,14 +51,14 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		hitPoints -= amount;
 	else
 		hitPoints = 0;
-	std::cout << "ClapTrap " << name << " takes "
+	std::cout  << name << " takes "
 		<< amount << " points of damage!" << " Now it has "
 		<< hitPoints << " hitpoints."<< std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
 		hitPoints = hitPoints + amount;
-	std::cout << "ClapTrap " << name << " is repaired for " << amount
+	std::cout << name << " is repaired for " << amount
 		<< " hit points!" << " Now it has " << hitPoints << " hitpoints."
 		<< std::endl;
 }

@@ -29,17 +29,17 @@ ScavTrap::~ScavTrap() {
 void	ScavTrap::attack(std::string const & target) {
 	if (attackDamage > energyPoints)
 		std::cout << "ScavTrap " << name
-			<< " doesn't has enough energy points to attack." << std::endl;
+			<< " doesn't have enough energy points to attack." << std::endl;
 	else {
 		energyPoints -= attackDamage;
-		std::cout << "ScavTrap " << name << " attacks " << target
-			<< ", causing " << attackDamage << " points of damage!" 
-			<< " Now has " << energyPoints << " energy points." << std::endl;
+		std::cout << "Attention! " << "ScavTrap " << name << " attacks " << target << "!!!"
+			<< " The attack caused " << attackDamage << " points of damage!" 
+			<< " Energy points reduced to " << energyPoints << std::endl;
 	}
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << "ScavTrap have entered in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap have entered the Gate keeper mode" << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator =(ScavTrap& other) {

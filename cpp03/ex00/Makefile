@@ -1,4 +1,4 @@
-NAME		=	ex
+NAME		=	clap
 
 SRC			=	$(wildcard *.cpp)
 

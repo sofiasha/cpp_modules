@@ -1,4 +1,4 @@
-NAME		=	ex
+NAME		=	frag
 
 SRC			=	$(wildcard *.cpp)
 

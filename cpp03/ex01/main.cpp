@@ -16,4 +16,5 @@ int main() {
 	jok.setAttackDamage(9);
 	jok.attack(bat.getName());
 	bat.takeDamage(jok.getAttackDamage());
+	bat.guardGate();
 }

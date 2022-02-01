@@ -32,14 +32,14 @@ void	FragTrap::attack(std::string const & target) {
 			<< " doesn't has enough energy points to attack." << std::endl;
 	else {
 		energyPoints -= attackDamage;
-		std::cout << "FragTrap " << name << " attacks " << target
-			<< ", causing " << attackDamage << " points of damage!" 
-			<< " Now has " << energyPoints << " energy points." << std::endl;
+		std::cout << "Warning! " << "FragTrap " << name << " attacks " << target 
+			<< " with a knife, hitting " << attackDamage << " points of damage!" 
+			<< " Now " << name << " has " << energyPoints << " energy points." << std::endl;
 	}
 }
 
 void	FragTrap::highFivesGuys() {
-	std::cout << "FragTrap " << name << " tries to give a high five."
+	std::cout << "FragTrap " << name << " tries to give a high five. What a plot twist!"
 		<< std::endl;
 }
 

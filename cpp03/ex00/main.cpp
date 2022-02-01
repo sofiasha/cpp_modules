@@ -2,11 +2,7 @@
 
 int main() {
 	ClapTrap	bat("Batman");
-	// ClapTrap	jok;
-	// bat.setAttackDamage(2);
-	// jok=bat;
-	// ClapTrap	jok("Joker");
-	ClapTrap	jok(bat);
+	ClapTrap	jok("Joker");
 
 	bat.attack(jok.getName());
 	jok.takeDamage(bat.getAttackDamage());

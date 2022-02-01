@@ -32,14 +32,14 @@ void	ScavTrap::attack(std::string const & target) {
 			<< " doesn't have enough energy points to attack." << std::endl;
 	else {
 		energyPoints -= attackDamage;
-		std::cout << "ScavTrap " << name << " attacks " << target
-			<< ", causing " << attackDamage << " points of damage!" 
-			<< " Now it has " << energyPoints << " energy points." << std::endl;
+		std::cout << "Attention! " << "ScavTrap " << name << " attacks " << target << "!!!"
+			<< " The attack caused " << attackDamage << " points of damage!" 
+			<< " Energy points reduced to " << energyPoints << std::endl;
 	}
 }
 
 void	ScavTrap::guardGate() {
-	std::cout << "ScavTrap has entered the Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap have entered the Gate keeper mode" << std::endl;
 }
 
 ScavTrap&	ScavTrap::operator =(ScavTrap& other) {
