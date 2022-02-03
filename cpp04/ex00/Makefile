@@ -1,22 +1,20 @@
-NAME		=	animal
+NAME		=	Animals
 
 SRC			=	$(wildcard *.cpp)
 
-OBJ			=	$(SRC:%.cpp=%.o)
+OBJ			=	$(SRC:.cpp=.o)
 
-DEP			=	$(OBJ:%.o=%.d)
+CPP			=	c++
 
-CPPFLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow
+FLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
 
-$(NAME):	$(OBJ)
-			c++ $^ -o $@
-
--include	$(DEP)
-
 %.o:		%.cpp
-			c++ $(CPPFLAGS) -std=c++98 -MMD -c $< -o $@
+			$(CPP) $(FLAGS) -c -o $@ $?
+
+$(NAME):	$(OBJ)
+			$(CPP) $(OBJ) -o $(NAME)
 
 all:		$(NAME)
 
@@ -24,7 +22,7 @@ run:		$(NAME)
 			./$(NAME)
 
 clean:
-			$(RM) $(OBJ) $(DEP)
+			$(RM) $(OBJ)
 
 fclean:		clean
 			$(RM) $(NAME)
@@ -32,4 +30,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
-

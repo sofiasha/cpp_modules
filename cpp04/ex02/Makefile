@@ -1,29 +1,20 @@
-NAME		=	ex02
-
-BLD_DIR		=	./build
+NAME		=	Animals
 
 SRC			=	$(wildcard *.cpp)
 
-OBJ			=	$(SRC:%.cpp=$(BLD_DIR)/%.o)
+OBJ			=	$(SRC:.cpp=.o)
 
-DEP			=	$(OBJ:%.o=%.d)
+CPP			=	c++
 
-CXX			=	clang++
-
-CPPFLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow
-
-CXXFLAGS	=	-std=c++98
+FLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
 
+%.o:		%.cpp
+			$(CPP) $(FLAGS) -c -o $@ $?
+
 $(NAME):	$(OBJ)
-			$(CXX) $^ -o $@
-
--include	$(DEP)
-
-$(BLD_DIR)/%.o:%.cpp
-			mkdir -p $(@D)
-			$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -c $< -o $@
+			$(CPP) $(OBJ) -o $(NAME)
 
 all:		$(NAME)
 
@@ -31,8 +22,7 @@ run:		$(NAME)
 			./$(NAME)
 
 clean:
-			$(RM) $(OBJ) $(DEP)
-			$(RM) -r $(BLD_DIR)
+			$(RM) $(OBJ)
 
 fclean:		clean
 			$(RM) $(NAME)
@@ -40,4 +30,3 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
-
