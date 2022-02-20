@@ -17,7 +17,7 @@ Dog::Dog(const Dog& other): Animal(other.type) {
 }
 
 void Dog::makeSound() const {
-    std::cout << "Dog: Woof\n";
+    std::cout << "Dog barks\n";
 }
 
 const Brain* Dog::getBrain() const {

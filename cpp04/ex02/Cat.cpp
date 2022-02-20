@@ -18,7 +18,7 @@ Cat::Cat(const Cat& other): Animal(other.type) {
 }
 
 void Cat::makeSound() const {
-    std::cout << "Cat: Mew\n";
+    std::cout << "Cat meows\n";
 }
 
 const Brain* Cat::getBrain() const {

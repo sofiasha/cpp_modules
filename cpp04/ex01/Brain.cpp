@@ -15,6 +15,7 @@ Brain::~Brain() {
 }
 
 Brain& Brain::operator=(Brain& other) {
+	std::cout << "Brain assignment operator called" << std::endl;
     if (this == &other)
         return *this;
     for (int i = 0; i < 100; i++)

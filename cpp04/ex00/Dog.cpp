@@ -14,5 +14,11 @@ Dog::Dog(Dog& other): Animal(other.type) {
 }
 
 void Dog::makeSound() const {
-    std::cout << "Dog: Woof\n";
+    std::cout << "Dog barks\n";
+}
+
+Dog&	Dog::operator =(Dog& other) {
+	std::cout << "Dog assignment operator called" << std::endl;
+	type = other.type;
+	return *this;
 }

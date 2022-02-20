@@ -18,5 +18,11 @@ WrongCat::WrongCat(WrongCat& other): WrongAnimal(other.type) {
 }
 
 void WrongCat::makeSound() const {
-    std::cout << "WrongCat: Bzzz\n";
+    std::cout << "WrongCat quacks\n";
+}
+
+WrongCat&	WrongCat::operator =(WrongCat& other) {
+	std::cout << "WrongCat assignment operator called" << std::endl;
+	type = other.type;
+	return *this;
 }

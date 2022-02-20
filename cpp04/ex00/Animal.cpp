@@ -21,10 +21,11 @@ const std::string Animal::getType() const {
 }
 
 void Animal::makeSound() const {
-    std::cout << "Animal: ....\n";
+    std::cout << "Animal tries to make sound\n";
 }
 
 Animal& Animal::operator=(Animal& other) {
+	std::cout << "Animal assignment operator called" << std::endl;
     type = other.type;
     return *this;
 }

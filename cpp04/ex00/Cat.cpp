@@ -1,4 +1,5 @@
 #include "Cat.hpp"
+#include <iostream>
 
 Cat::Cat() {
     type = "Cat";
@@ -14,5 +15,11 @@ Cat::Cat(Cat& other): Animal(other.type) {
 }
 
 void Cat::makeSound() const {
-    std::cout << "Cat: Mew\n";
+    std::cout << "Cat meows\n";
+}
+
+Cat&	Cat::operator =(Cat& other) {
+	std::cout << "Cat assignment operator called" << std::endl;
+	type = other.type;
+	return *this;
 }

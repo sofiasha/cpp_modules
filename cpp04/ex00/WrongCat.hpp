@@ -10,6 +10,7 @@ class WrongCat: public WrongAnimal {
         ~WrongCat();
 
         virtual void makeSound() const;
+		WrongCat& operator=(WrongCat&);
 
     protected:
         std::string type;

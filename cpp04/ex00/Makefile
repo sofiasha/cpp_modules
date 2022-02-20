@@ -1,4 +1,4 @@
-NAME		=	Animals
+NAME		=	Animal
 
 SRC			=	$(wildcard *.cpp)
 
