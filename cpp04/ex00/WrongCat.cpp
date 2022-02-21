@@ -1,4 +1,5 @@
 #include "WrongCat.hpp"
+#include <iostream>
 
 WrongCat::WrongCat() {
     type = "WrongCat";
@@ -23,6 +24,8 @@ void WrongCat::makeSound() const {
 
 WrongCat&	WrongCat::operator =(WrongCat& other) {
 	std::cout << "WrongCat assignment operator called" << std::endl;
+	if (this == &other)
+		return *this;
 	type = other.type;
 	return *this;
 }

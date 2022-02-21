@@ -3,7 +3,7 @@
 Cat::Cat() {
     type = "Cat";
     brain = new Brain();
-    std::cout << "Cat is created\n";
+    std::cout << "Cat [default] is created\n";
 }
 
 Cat::~Cat() {
@@ -13,7 +13,7 @@ Cat::~Cat() {
 
 Cat::Cat(const Cat& other): Animal(other.type) {
     brain = new Brain(*other.brain);
-    std::cout << "Cat is copied\n";
+    std::cout << "Cat is copied.\n";
 }
 
 void Cat::makeSound() const {
@@ -31,4 +31,5 @@ Cat& Cat::operator =(Cat& other) {
 	type = other.type;
     brain = new Brain(*other.brain);
 	return *this;
+	std::cout << "Cat =assignment is called\n";
 }

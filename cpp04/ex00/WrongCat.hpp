@@ -12,7 +12,5 @@ class WrongCat: public WrongAnimal {
         virtual void makeSound() const;
 		WrongCat& operator=(WrongCat&);
 
-    protected:
-        std::string type;
 };
 #endif

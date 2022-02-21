@@ -18,11 +18,10 @@ int main() {
 	delete dog;
 	delete cat;
 
-	std::cout << "\n--------------- WRONG CAT/ANIMAL ---------------\n\n";
+	std::cout << "\n------ WRONG CAT/ANIMAL ------\n\n";
 
 	const WrongAnimal*	wrongMeta = new WrongAnimal();
 	const WrongAnimal*	wrongCat = new WrongCat();
-	std::cout << wrongMeta->getType() << " " << std::endl;
 	std::cout << wrongCat->getType() << " " << std::endl;
 	wrongCat->makeSound();
 	wrongMeta->makeSound();

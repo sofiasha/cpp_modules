@@ -26,6 +26,8 @@ void Animal::makeSound() const {
 
 Animal& Animal::operator=(Animal& other) {
 	std::cout << "Animal assignment operator called" << std::endl;
+	if (this == &other)
+		return *this;
     type = other.type;
     return *this;
 }

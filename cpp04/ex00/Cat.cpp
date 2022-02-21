@@ -20,6 +20,8 @@ void Cat::makeSound() const {
 
 Cat&	Cat::operator =(Cat& other) {
 	std::cout << "Cat assignment operator called" << std::endl;
+	if (this == &other)
+		return *this;
 	type = other.type;
 	return *this;
 }

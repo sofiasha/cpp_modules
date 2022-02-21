@@ -26,4 +26,6 @@ int main() {
 	}
 
 	std::cout << "dog brain : " << dog.getBrain() << std::endl;
+
+//	system ("leaks Animal");
 }
