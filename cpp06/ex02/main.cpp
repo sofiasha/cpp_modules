@@ -14,7 +14,7 @@ class C : public Base {};
 
 // возвращает случайный тип (а б или с)
 Base * generate(void) {
-	std::srand(std::time(nullptr));
+	std::srand(std::time(NULL));
 	int	id = std::rand() % 3;
 
 	switch (id) {
@@ -82,13 +82,13 @@ void identify(Base& p) {
 	std::cout << "Base" << std::endl;
 }
 
-int	main() {
+int	main() 
+{
 	Base*	p = generate();
-	// Base*	p = new Base();
 
-	std::cout << "Pointer\n";
+	std::cout << "Pointer:\n";
 	identify(p);
-	std::cout << "Reference\n";
+	std::cout << "Reference:\n";
 	identify(*p);
 	delete p;
 }

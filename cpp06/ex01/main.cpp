@@ -4,6 +4,7 @@
 typedef struct s_data 
 {
 	std::string	str;
+	int			i;
 } Data;
 
 // переводит указатель на структуру в инт
@@ -24,10 +25,14 @@ int	main() {
 	Data*		ptr;
 
 	data.str = "cpp module 06";
-	std::cout << data.str << std::endl;
+	data.i = 5;
+
+	std::cout << "Str: " << data.str << std::endl;
+	std::cout << "int: " << data.i << std::endl;
 	raw = serialize(&data);
 	ptr = deserialize(raw);
 	std::cout << "Data struct address: " << &data << std::endl;
 	std::cout << "After deserializing: " << ptr << std::endl;
-	std::cout << data.str << std::endl;
+	std::cout << "Str: " << data.str << std::endl;
+	std::cout << "int: " << data.i << std::endl;
 }
