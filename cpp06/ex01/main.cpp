@@ -29,10 +29,12 @@ int	main() {
 
 	std::cout << "Str: " << data.str << std::endl;
 	std::cout << "int: " << data.i << std::endl;
+	// std::cout << "Data struct address: " << &data << std::endl;
+
 	raw = serialize(&data);
 	ptr = deserialize(raw);
-	std::cout << "Data struct address: " << &data << std::endl;
-	std::cout << "After deserializing: " << ptr << std::endl;
-	std::cout << "Str: " << data.str << std::endl;
-	std::cout << "int: " << data.i << std::endl;
+
+	// std::cout << "After deserializing: " << ptr << std::endl;
+	std::cout << "Str after: " << data.str << std::endl;
+	std::cout << "int after: " << data.i << std::endl;
 }

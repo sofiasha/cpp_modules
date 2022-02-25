@@ -59,7 +59,7 @@ void identify(Base* p) {
 // принимает ссылку(она не может быть равна 0)
 void identify(Base& p) {
 	try {
-		A&	a = dynamic_cast<A&>(p); // не может вернуть 0 при неудаче. Если здесь вернулся эксепшн, то переходим в кэтч
+		A&	a = dynamic_cast<A&>(p); // не может вернуть 0 при неудаче, тк ссылка
 		(void) a;
 		std::cout << "A" << std::endl;
 		return;
